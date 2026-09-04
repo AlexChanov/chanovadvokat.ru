@@ -115,7 +115,7 @@
       if (p && p.catch) p.catch(function () { fallbackPoster(); });
     }
 
-    // автоплей заблокирован (или кадр не декодировался) — кладём постер фоном полосы
+    // автоплей заблокирован (или кадр не декодировался) - кладём постер фоном полосы
     function fallbackPoster() {
       if (V.poster) box.style.background = 'var(--ink-2) url("' + V.poster + '") center 46% / cover';
       el.style.opacity = '0';
@@ -261,11 +261,11 @@
   if (S.telegram) {
     reach.push({ k: 'tg', href: S.telegram, ext: true, t: 'Написать в Telegram', s: 'Ответ в мессенджере' });
   }
-  reach.push({ k: 'tel', href: telHrefOf(S.phoneHref), t: S.phone, s: 'Мобильный — звонок в любое время' });
+  reach.push({ k: 'tel', href: telHrefOf(S.phoneHref), t: S.phone, s: 'Мобильный - звонок в любое время' });
   if (S.phone2) {
     reach.push({ k: 'tel', href: telHrefOf(S.phone2Href), t: S.phone2, s: 'Городской' });
   }
-  reach.push({ k: 'mail', href: 'mailto:' + S.email, t: S.email, s: 'Почта — для документов' });
+  reach.push({ k: 'mail', href: 'mailto:' + S.email, t: S.email, s: 'Почта - для документов' });
 
   $('#reach').innerHTML = reach.map(function (r) {
     return '<a class="reach__i' + (r.hot ? ' reach__i--hot' : '') + '" href="' + esc(r.href) + '"' +

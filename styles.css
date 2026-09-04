@@ -1,5 +1,5 @@
 /* ============================================================
-   Адвокатский сайт — стили
+   Адвокатский сайт - стили
    ============================================================ */
 
 :root{
@@ -395,10 +395,14 @@ p{margin:0}
 
 
 @media (max-width:760px){
-  /* на узком экране горизонтальный градиент душит картинку — только вертикальный */
+  /* на узком экране фото не фоном под текстом, а отдельным блоком под ним */
+  .hero{display:flex;flex-direction:column;min-height:auto;align-items:stretch}
+  .hero__in{order:1;padding-top:clamp(104px,26vw,140px);padding-bottom:clamp(28px,6vw,40px)}
+  .hero__media{order:2;position:relative;height:clamp(340px,92vw,520px)}
+  .hero__media img{object-position:64% 20%}
   .hero__media::after{
-    background:linear-gradient(to top,rgba(6,12,26,.97) 0%,rgba(6,12,26,.72) 34%,rgba(6,12,26,.46) 62%,rgba(6,12,26,.66) 100%)}
-  .hero__media img{object-position:70% center}
+    background:linear-gradient(to bottom,rgba(6,12,26,.72) 0%,rgba(6,12,26,.10) 30%,rgba(6,12,26,0) 100%)}
+  .stats{margin-top:clamp(30px,7vw,44px)}
   .vhead__shade{background:linear-gradient(to top,rgba(6,12,26,.97) 0%,rgba(6,12,26,.86) 30%,rgba(6,12,26,.44) 64%,rgba(6,12,26,.70) 100%)}
 }
 
