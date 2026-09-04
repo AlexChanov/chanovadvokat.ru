@@ -27,7 +27,7 @@ const SITE = {
   telegram:   "",
   whatsapp:   "https://wa.me/79266939150",
   address:    "",
-  hours:      "Круглосуточно, без выходных",
+  hours:      "Круглосуточно",
 
   // --- Цифры ---
   stats: [
